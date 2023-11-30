@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddTaskDialogController" spacing="10" prefWidth="300" prefHeight="500">
+
+    <Label text="Name:"/>
+    <TextField fx:id="nameField" promptText="Name">
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </TextField>
+
+    <Label text="Description:"/>
+    <TextField fx:id="descriptionField" promptText="Description">
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </TextField>
+
+    <Label text="Status:"/>
+    <ComboBox fx:id="statusField" promptText="Status">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="To Do"/>
+                <String fx:value="Doing"/>
+                <String fx:value="Done"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="To Do"/>
+        </value>
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </ComboBox>
+
+    <Label text="Due Date:"/>
+    <DatePicker fx:id="dueDateField" promptText="Due Date">
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </DatePicker>
+
+    <Label text="Priority:"/>
+    <ComboBox fx:id="priorityField" promptText="Priority">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Low"/>
+                <String fx:value="Normal"/>
+                <String fx:value="High"/>
+            </FXCollections>
+        </items>
+        <value>
+            <String fx:value="Normal"/>
+        </value>
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </ComboBox>
+
+    <Label text="Creation Date:" />
+    <DatePicker fx:id="creationDateField" promptText="Creation Date" editable="false" disable="true">
+        <VBox.margin>
+            <Insets bottom="10" left="10" right="10"/>
+        </VBox.margin>
+    </DatePicker>
+
+    <HBox spacing="10" >
+        <Button fx:id="saveButton" text="Save" onAction="#saveTask"/>
+
+        <Button fx:id="cancelButton" text="Cancel" onAction="#cancel"/>
+    </HBox>
+
+</VBox>

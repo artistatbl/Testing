@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMovieController">
+    <children>
+        <VBox layoutX="29.0" layoutY="30.0" prefHeight="357.0" prefWidth="346.0" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label text="Add New Movie" textAlignment="CENTER">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <HBox spacing="10.0">
+                <Label text="Title:" />
+                <TextField fx:id="titleField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Director:" />
+                <TextField fx:id="directorField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Year:" />
+                <TextField fx:id="yearField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Genre:" />
+                <TextField fx:id="genreField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Rating:" />
+                <TextField fx:id="ratingField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Watched Date (yyyy-MM-dd):" />
+                <TextField fx:id="watchedDateField" />
+            </HBox>
+            <Button fx:id="saveButton" onAction="#saveButtonClicked" text="Save" />
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="900" spacing="10" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainViewController">
+
+    <!-- Buttons Container -->
+    <HBox spacing="10">
+        <Button fx:id="addButton" onAction="#showAddTaskDialog" text="Add Task" />
+        <Button fx:id="editButton" onAction="#showEditTaskDialog" text="Edit Task" />
+        <Button fx:id="deleteButton" onAction="#handleDeleteTask" text="Remove Task" />
+        <Button fx:id="completeButton" onAction="#handleCompleteTask" text="Complete Task" />
+    </HBox>
+
+    <!-- Task Display TableView -->
+    <TableView fx:id="taskTable" editable="true" fixedCellSize="0.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="56.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="224.0" text="Name" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="133.0" text="Description" />
+            <TableColumn fx:id="statusColumn" prefWidth="124.0" text="Status" />
+            <TableColumn fx:id="dueDateColumn" prefWidth="116.0" text="Due Date" />
+            <TableColumn fx:id="priorityColumn" prefWidth="98.0" text="Priority" />
+            <TableColumn fx:id="creationDateColumn" prefWidth="148.0" text="Creation Date" />
+        </columns>
+    </TableView>
+</VBox>

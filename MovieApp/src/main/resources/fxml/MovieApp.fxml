@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MovieAppController">
+
+    <!-- Add Movie Button -->
+    <Button layoutX="20.0" layoutY="20.0" onAction="#addMovieButtonClicked" text="Add Movie" fx:id="addMovieButton"/>
+
+    <!-- Delete Movie Button -->
+    <Button layoutX="120.0" layoutY="20.0" onAction="#deleteMovieButtonClicked" text="Delete Movie" />
+
+    <!-- Table View to Display Movies -->
+    <TableView fx:id="movieTableView" layoutX="20.0" layoutY="60.0" prefHeight="300.0" prefWidth="632.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="59.0" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="titleColumn" prefWidth="105.0" text="Title">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="directorColumn" prefWidth="118.0" text="Director">
+                <cellValueFactory>
+                    <PropertyValueFactory property="director" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="69.0" text="Year">
+                <cellValueFactory>
+                    <PropertyValueFactory property="year" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="77.0" text="Genre">
+                <cellValueFactory>
+                    <PropertyValueFactory property="genre" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn maxWidth="64.0" prefWidth="64.0" text="Rating">
+                <cellValueFactory>
+                    <PropertyValueFactory property="rating" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn maxWidth="139.0" prefWidth="139.0" text="Watched Date">
+                <cellValueFactory>
+                    <PropertyValueFactory property="watchedDate" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</AnchorPane>

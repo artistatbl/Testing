@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.EditTaskWindowController" spacing="10" prefWidth="300" prefHeight="500" >
+
+    <Label text="Name:" />
+    <TextField fx:id="nameField" />
+
+    <Label text="Description:" />
+    <TextField fx:id="descriptionField" />
+
+    <Label text="Status:" />
+    <ComboBox fx:id="statusField">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="To Do"/>
+                <String fx:value="Doing"/>
+                <String fx:value="Done"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Due Date:" />
+    <DatePicker fx:id="dueDateField" />
+
+    <Label text="Priority:" />
+    <ComboBox fx:id="priorityField">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Low"/>
+                <String fx:value="Normal"/>
+                <String fx:value="High"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <HBox spacing="10">
+        <Button fx:id="saveButton" text="Save" onAction="#save"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#cancel"/>
+    </HBox>
+
+</VBox>

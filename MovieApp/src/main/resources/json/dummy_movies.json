@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "genre": "Sci-Fi",
+    "rating": 5,
+    "watchedDate": "2022-01-15"
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "year": 1994,
+    "genre": "Drama",
+    "rating": 10,
+    "watchedDate": "2022-02-20"
+  },
+  {
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": 1994,
+    "genre": "Crime",
+    "rating": 8,
+    "watchedDate": "2022-03-25"
+  },
+  {
+    "title": "The Matrix",
+    "director": "Lana Wachowski",
+    "year": 1999,
+    "genre": "Sci-Fi",
+    "rating": 7,
+    "watchedDate": "2022-04-10"
+  },
+  {
+    "title": "Forrest Gump",
+    "director": "Robert Zemeckis",
+    "year": 1994,
+    "genre": "Drama",
+    "rating": 5,
+    "watchedDate": "2022-05-05"
+  }
+]
