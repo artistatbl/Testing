@@ -106,8 +106,8 @@ class TaskManagerTest extends ApplicationTest {
         // Simulate editing task details in the dialog
         // clickOn("#nameField").write("Updated Name");
         clickOn("#descriptionField").write("Updated Description");
-        clickOn("#statusField").clickOn("Updated Status");
-        clickOn("#priorityField").clickOn("Updated Priority");
+        clickOn("#statusField").clickOn("Doing");
+        clickOn("#priorityField").clickOn("High");
 
         // Click the save button to apply changes
         clickOn("#saveButton");
@@ -119,8 +119,8 @@ class TaskManagerTest extends ApplicationTest {
         Task editedTask = taskTable.getSelectionModel().getSelectedItem();
         assertEquals("Updated Name", editedTask.getName(), "Task name should be updated.");
         assertEquals("Updated Description", editedTask.getDescription(), "Task description should be updated.");
-        assertEquals("Updated Status", editedTask.getStatus(), "Task status should be updated.");
-        assertEquals("Updated Priority", editedTask.getPriority(), "Task priority should be updated.");
+        assertEquals("Doing", editedTask.getStatus(), "Task status should be updated.");
+        assertEquals("High", editedTask.getPriority(), "Task priority should be updated.");
     }
 
 }

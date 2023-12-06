@@ -51,6 +51,7 @@ public class BookDAO {
             pstmt.setString(7, book.getPublisherName());
             pstmt.setString(8, book.getAvailabilityStatus());
             pstmt.setString(9, book.getCondition());
+            System.out.println("book id: " + book.getBookID());
 
             pstmt.executeUpdate();
             return true;
