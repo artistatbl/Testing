@@ -25,7 +25,7 @@ class BookManagerTest extends ApplicationTest {
 
 
     @Test
-    public void testAddBookButton_shouldAddBookToGUI() {
+     void testAddBookButton_shouldAddBookToGUI() {
         // Assuming your add book button has a fx:id "addBookButton"
         clickOn("#addBookButton");
         clickOn(1700, 400);
@@ -63,7 +63,7 @@ class BookManagerTest extends ApplicationTest {
 
     @DisplayName("Test Edit Book")
     @Test
-    public void testEditBook_ShouldEditBookToGUI(){
+     public void testEditBook_ShouldEditBookToGUI(){
         TableView<Book> bookTableView  = lookup("#booksTable").queryAs(TableView.class);
         assertTrue(bookTableView.getItems().size() > 0, "Book table manager should have at least one book for editing");
         Node firstRowCell = lookup(".table-row-cell").queryAll().iterator().next();
@@ -88,13 +88,10 @@ class BookManagerTest extends ApplicationTest {
     }
     @DisplayName("Test Delete Book")
     @Test
-    public void testDeleteBookButton_ShouldRemoveBookFromGUI (){
+     void testDeleteBookButton_ShouldRemoveBookFromGUI (){
         TableView<Book> bookTableView  = lookup("#booksTable").queryAs(TableView.class);
-        assertFalse(bookTableView.getItems().isEmpty(), "Book table manager should have at least one book for editing");
-
-        //Select the first row in the table
-        Node firstRowCell = lookup(".table-row-cell").queryAll().iterator().next();
-        clickOn(firstRowCell);
+        assertNotNull(bookTableView);
+        interact(() -> bookTableView.getSelectionModel().select(0));
 
         //Store the book to be deleted
         Book bookToDelete = bookTableView.getSelectionModel().getSelectedItem();

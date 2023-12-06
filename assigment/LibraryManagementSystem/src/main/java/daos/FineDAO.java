@@ -16,6 +16,7 @@ import java.util.List;
 public class FineDAO {
 
     private final DatabaseHandler dbHandler;
+
     private Connection conn;
 
     /**
